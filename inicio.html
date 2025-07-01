@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Botones con Fondo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('fondo.jpeg'); /* Nombre de tu imagen */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 15px;
+      font-size: 18px;
+      border: none;
+      background-color: rgba(0, 128, 255, 0.8);
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    button:hover {
+      background-color: rgba(0, 100, 200, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <h1>Catalogos</h1>
+  <button onclick="window.open('Catalogo_ciclo_07_25.pdf', '_blank')">BAGUES</button>
+  <button onclick="window.open('UNLOCK_AR_C0725.pdf', '_blank')">UNLOCK</button>
+</body>
+</html>
