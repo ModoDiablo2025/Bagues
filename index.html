@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>THREE STARS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRHEE STARS</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('fondo.jpeg'); /* Nombre de tu imagen */
+      font-family: sans-serif;
+      background-image: url('fondo.jpg');
       background-size: cover;
       background-position: center;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      text-align: center;
+      color: white;
     }
 
     h1 {
-      color: white;
-      text-shadow: 2px 2px 5px black;
+      margin-top: 30px;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .botones {
+      margin: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     button {
       padding: 15px 30px;
-      margin: 15px;
       font-size: 18px;
       border: none;
-      background-color: rgba(0, 128, 255, 0.8);
-      color: white;
       border-radius: 10px;
+      background-color: rgba(0, 123, 255, 0.9);
+      color: white;
       cursor: pointer;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: rgba(0, 100, 200, 0.9);
+      background-color: rgba(0, 100, 220, 0.95);
+    }
+
+    iframe {
+      width: 90%;
+      height: 80vh;
+      margin: 20px 0;
+      border: 2px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px black;
+      background-color: white;
     }
   </style>
 </head>
 <body>
   <h1>Catalogos</h1>
-  <button onclick="window.open('Catalogo_ciclo_07_25.pdf', '_blank')">BAGUES</button>
-  <button onclick="window.open('UNLOCK_AR_C0725.pdf', '_blank')">UNLOCK</button>
+
+  <div class="botones">
+    <button onclick="mostrarPDF('Catalogo_ciclo_07_25_compressed.pdf')">BAGUES</button>
+    <button onclick="mostrarPDF('UNLOCK_AR_C0725.pdf')">UNLOCK</button>
+  </div>
+
+  <iframe id="visorPDF" src="" frameborder="0"></iframe>
+
+  <script>
+    function mostrarPDF(ruta) {
+      document.getElementById('visorPDF').src = ruta;
+    }
+  </script>
 </body>
 </html>
