@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TRHEE STARS</title>
+  <title>THREE STARS</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,20 +13,22 @@
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      background-image: url('fondo.jpg');
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
+      background-color: #87CEEB; /* Celeste */
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      color: white;
+      color: #000;
+    }
+
+    header img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
     }
 
     h1 {
-      margin-top: 30px;
-      text-shadow: 2px 2px 6px black;
+      margin: 20px 0 10px 0;
     }
 
     .botones {
@@ -57,14 +59,18 @@
       width: 90%;
       height: 80vh;
       margin: 20px 0;
-      border: 2px solid white;
+      border: 2px solid #333;
       border-radius: 10px;
-      box-shadow: 0 0 20px black;
       background-color: white;
     }
   </style>
 </head>
 <body>
+  <!-- Imagen del título (banner) -->
+  <header>
+    <img src="fondo.jpeg" alt="Banner del sitio">
+  </header>
+
   <h1>Catalogos</h1>
 
   <div class="botones">
@@ -81,3 +87,4 @@
   </script>
 </body>
 </html>
+
