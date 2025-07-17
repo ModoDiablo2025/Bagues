@@ -16,7 +16,6 @@
       background-color: #C2E9FF;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       min-height: 100vh;
       text-align: center;
@@ -38,12 +37,11 @@
       display: flex;
       flex-direction: row;
       gap: 20px;
-      align-items: center;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
     }
-    
-    button {
+
+    a button {
       padding: 20px 40px;
       font-size: 22px;
       border: none;
@@ -55,7 +53,7 @@
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    a button:hover {
       background-color: rgba(0, 100, 220, 0.95);
     }
 
@@ -80,22 +78,18 @@
   <!-- Título centrado -->
   <h1>Catálogos</h1>
 
-  <!-- Botones centrados -->
+  <!-- Botones como enlaces -->
   <div class="botones">
-    <button onclick="mostrarPDF('Catalogo_ciclo_07_25_compressed.pdf')">BAGUES</button>
-    <button onclick="mostrarPDF('UNLOCK_AR_C0725.pdf')">UNLOCK</button>
+    <a href="https://drive.google.com/file/d/1sxwuRLg7JO1T4Lichhr37AsrBXfwTYqZ/view?usp=sharing" target="visor">
+      <button>BAGUES</button>
+    </a>
+    <a href="https://docs.google.com/gview?embedded=true&url=https://drive.google.com/uc?export=download&id=ID_DEL_PDF_UNLOCK" target="visor">
+      <button>UNLOCK</button>
+    </a>
   </div>
 
-  <!-- Contenedor del PDF -->
-  <iframe id="visorPDF" src="" style="display: none;"></iframe>
-
-  <script>
-    function mostrarPDF(ruta) {
-      const visor = document.getElementById('visorPDF');
-      visor.src = ruta;
-      visor.style.display = 'block';
-    }
-  </script>
+  <!-- Visor de PDF -->
+  <iframe name="visor"></iframe>
 
 </body>
 </html>
