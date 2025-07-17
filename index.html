@@ -9,19 +9,18 @@
       box-sizing: border-box;
     }
 
-   body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #C2E9FF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* Centrado vertical */
-  align-items: center;      /* Centrado horizontal */
-  min-height: 100vh;
-  text-align: center;
-}
-
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #C2E9FF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
 
     header img {
       width: 100%;
@@ -30,19 +29,20 @@
     }
 
     h1 {
-      font-size: 2.5rem; /* Tamaño grande */
-      margin: 20px 0 10px 0
+      font-size: 2.5rem;
+      margin: 20px 0 10px 0;
     }
 
     .botones {
       margin: 20px;
       display: flex;
-      flex-direction: column;  /* ⬅️ Importante */
+      flex-direction: row;
       gap: 20px;
-      align-items: center;     /* ⬅️ Para que estén centrados */
-      justify-content: center; /* CENTRA LOS BOTONES */
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-
+    
     button {
       padding: 20px 40px;
       font-size: 22px;
@@ -78,16 +78,24 @@
   </header>
 
   <!-- Título centrado -->
-  <h1>Catalogos</h1>
+  <h1>Catálogos</h1>
 
   <!-- Botones centrados -->
   <div class="botones">
-    <button onclick="window.location.href='Catalogo_ciclo_07_25_compressed.pdf'">BAGUES</button>
-    <br>
-    <button onclick="window.location.href='UNLOCK_AR_C0725.pdf'">UNLOCK</button>
+    <button onclick="mostrarPDF('Catalogo_ciclo_07_25_compressed.pdf')">BAGUES</button>
+    <button onclick="mostrarPDF('UNLOCK_AR_C0725.pdf')">UNLOCK</button>
   </div>
 
+  <!-- Contenedor del PDF -->
+  <iframe id="visorPDF" src="" style="display: none;"></iframe>
+
+  <script>
+    function mostrarPDF(ruta) {
+      const visor = document.getElementById('visorPDF');
+      visor.src = ruta;
+      visor.style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
-
